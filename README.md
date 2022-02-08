@@ -1,5 +1,5 @@
 # co2rm
-**coreportect 2 replaymod tool**
+**CoreProtect 2 ReplayMod tool**
 
 converts block changes recorded with [CoreProtect](https://www.spigotmc.org/resources/coreprotect.8631/) to a [ReplayMod](https://www.replaymod.com/) replay  
 you supply an initial recording and this tool will append the specified block changes to the end of the replay
@@ -55,3 +55,5 @@ built using [Maven](https://maven.apache.org/)
 see `pom.xml` for dependencies
 
 build with `mvn clean package`, then your dependency-packaged jar should appear in `target/co2rm.jar`
+
+then run with `java -jar co2rm.jar <arguments>`
