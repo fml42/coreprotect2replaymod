@@ -19,9 +19,9 @@ you can use the `-o <output>` argument to specify a different path or filename
 currently supported versions:  
   * `1.16.4` & `1.16.4` - protocol version 754  
   * `1.18` & `1.18.1` - protocol version 757  
-* minecraft block identifiers (like e.g. `minecraft:oak_log`) need to be converted to a numeric state id by the tool for use with the network protocol. this requires a file that provides the mapping from minecraft ids to numeric ids. these files differ for every minecraft version of course.  
-this repo includes some inside the *blocks/* directory. if you need another one, they can be generated using the vanilla server, see [Data Generators](https://wiki.vg/Data_Generators)  
-use the `-b <blocks_map_file>` argument to specify the block map file. if omitted, the tool will look for a default *blocks.json* file in the working directory.
+* minecraft block ids (like e.g. `minecraft:oak_log`) need to be converted to a numeric state id by the tool for use with the network protocol. this requires a file that provides the mapping from minecraft ids to numeric state ids (a so-called "blocks report"). these block reports differ for every minecraft version of course.  
+this repository includes some block report files inside the *blocks/* directory. if you need another one, they can be generated using the `--blocks` data generator on the vanilla server, see [Data Generators](https://wiki.vg/Data_Generators)  
+use the `-b <blocks_report_file>` argument to specify the blocks report file. if omitted, the tool will look for a default *blocks.json* file in the working directory.
 
 ## usage
 
@@ -42,8 +42,8 @@ Required arguments:
 \* these arguments restrict what block changes are read form the coreprotect db. the selection is pretty straight-forward, it selects all block changes in the world *world* inside the cuboid defined by *bb1* and *bb2* and between time *t1* and *t2*.
 
 Optional arguments:  
-`-b <blocks_map_file>` specify block sate map file   
-`-o <file>` recording output file   
+`-b <blocks_report_file>` specify blocks report file for namespaced id to state id mapping  
+`-o <file>` recording output file to write to   
 `-y` allow output overwriting  
 
 Run with `-h` for help with all options
