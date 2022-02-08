@@ -17,7 +17,7 @@ i.e. if your input file is *path/to/input.mcpr*, the output will be *path/to/inp
 you can use the `-o <output>` argument to specify a different path or filename
 * different minecraft versions use different network protocol versions. not all are implemented in this tool as packet ids/definitions change between the versions.  
 currently supported versions:  
-  * `1.16.4` & `1.16.4` - protocol version 754  
+  * `1.16.4` & `1.16.5` - protocol version 754  
   * `1.18` & `1.18.1` - protocol version 757  
 * minecraft block ids (like e.g. `minecraft:oak_log`) need to be converted to a numeric state id by the tool for use with the network protocol. this requires a file that provides the mapping from minecraft ids to numeric state ids (a so-called "blocks report"). these block reports differ for every minecraft version of course.  
 this repository includes some block report files inside the *blocks/* directory. if you need another one, they can be generated using the `--blocks` data generator on the vanilla server, see [Data Generators](https://wiki.vg/Data_Generators)  
