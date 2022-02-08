@@ -26,6 +26,7 @@ use the `-b <blocks_report_file>` argument to specify the blocks report file. if
 **there currently is some very basic support for:**
   * making doors look correct (lower & upper half)  
   * opening/closing trapdoors  
+* entities and entity changes aren't supported at all currently
 
 ## usage
 
