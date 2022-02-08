@@ -22,6 +22,10 @@ currently supported versions:
 * minecraft block ids (like e.g. `minecraft:oak_log`) need to be converted to a numeric state id by the tool for use with the network protocol. this requires a file that provides the mapping from minecraft ids to numeric state ids (a so-called "blocks report"). these block reports differ for every minecraft version of course.  
 this repository includes some block report files inside the *blocks/* directory. if you need another one, they can be generated using the `--blocks` data generator on the vanilla server, see [Data Generators](https://wiki.vg/Data_Generators)  
 use the `-b <blocks_report_file>` argument to specify the blocks report file. if omitted, the tool will look for a default *blocks.json* file in the working directory.
+* any block that isn't a straight forward static block, so anything that can be interacted with like doors, containers, redstone components etc. will likely not show correctly in the replay. this is in part due to how coreprotect logs data and in part due to how certain blocks require more than just a simple block change packet which is all this tool currently supports *(some things can never be 100% accurately reconstructed because of how the logs are structured, whereas others that currently aren't showing up correctly can be fixed by adding more extra cases to the converter inside this tool)*.  
+**there currently is some very basic support for:**
+  * making doors look correct (lower & upper half)  
+  * opening/closing trapdoors  
 
 ## usage
 
